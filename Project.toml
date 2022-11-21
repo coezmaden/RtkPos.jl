@@ -3,6 +3,16 @@ uuid = "baa44ca5-2237-45c8-816b-f81ab824a5eb"
 authors = ["Can Ozmaden <git@canozmaden.com> and contributors"]
 version = "0.1.0"
 
+[deps]
+CategoricalArrays = "324d7699-5711-5eae-9e2f-1d82baa6b597"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
+FileIO = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
+Geodesy = "0ef565a4-170c-5f04-8de2-149903a85f3d"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+TimeZones = "f269a46b-ccf7-5d73-abea-4c690281aa53"
+
 [compat]
 julia = "1"
 
