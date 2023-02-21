@@ -10,6 +10,7 @@ using LinearAlgebra
 using CategoricalArrays
 
 include("parse_body.jl")
+include("parse_stat.jl")
 
 function load_pos(f)
     df = DataFrame(
@@ -23,6 +24,34 @@ function load_pos(f)
     )
     open(f) do s
         parse_body!(df, s)
+    end
+    return df
+end
+
+function load_pos_stat(f)
+    df = DataFrame(
+        Timestamp = ZonedDateTime[],
+        sys = [],
+        satnum = Int[],
+        az = Float64[],
+        el = Float64[],
+        prange_res = Float64[],
+        cphase_res = Float64[],
+        valid = Bool[],
+        SNR = Float64[],
+        fix = Int64[],
+        slip = Int64[],
+        lock = Int64[],
+        outc = Int64[],
+        slipc = Int64[],
+        rejc = Int64[],
+        icbias = Float64[],
+        bias = Float64[],
+        bias_var = Float64[],
+        lambda = Float64[]
+    )
+    open(f) do s
+        parse_stat!(df, s)
     end
     return df
 end
