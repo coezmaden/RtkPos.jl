@@ -22,6 +22,9 @@ function parse_stat!(df::DataFrame, s::IOStream)
 
         # Elevation
         push!(df.el, parse(Float64, line[7]))
+
+        # Elevation
+        push!(df.snr, parse(Float64, line[11]))
     end
 
 end
