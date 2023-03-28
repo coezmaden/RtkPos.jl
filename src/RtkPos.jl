@@ -36,11 +36,11 @@ function load_pos_stat(f)
         Timestamp = DateTime[],
         prn = String[],
         az = Float64[],
-        el = Float64[]
+        el = Float64[],
         # prange_res = Float64[],
         # cphase_res = Float64[],
         # valid = Bool[],
-        # SNR = Float64[],
+        snr = Float64[],
         # fix = Int64[],
         # slip = Int64[],
         # lock = Int64[],
