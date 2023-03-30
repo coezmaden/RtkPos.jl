@@ -23,7 +23,13 @@ function parse_stat!(df::DataFrame, s::IOStream)
         # Elevation
         push!(df.el, parse(Float64, line[7]))
 
-        # Elevation
+        # Pseudorange residual
+        push!(df.prange_res, parse(Float64, line[8]))
+
+        # Carrier phase residual
+        push!(df.cphase_res, parse(Float64, line[9]))
+
+        # SNR
         push!(df.snr, parse(Float64, line[11]))
     end
 
